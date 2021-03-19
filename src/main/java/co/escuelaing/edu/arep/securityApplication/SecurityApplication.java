@@ -3,7 +3,6 @@ package co.escuelaing.edu.arep.securityApplication;
 
 
 
-//import org.json.JSONObject;
 
 import co.escuelaing.edu.arep.calc.impl.CalculatorImpl;
 
@@ -19,7 +18,7 @@ public class SecurityApplication {
             CalculatorImpl calculator= new CalculatorImpl();
             System.out.println(req.body());
             calculator.controller(req.body());
-            return calculator.sum();
+            return 10;
 
         });
         post("/multi",(req,res)->{
@@ -47,6 +46,6 @@ public class SecurityApplication {
         if(System.getenv("PORT")!=null){
             return Integer.parseInt(System.getenv("PORT"));
         }
-        return 5000;
+        return 35000;
     }
 }
