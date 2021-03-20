@@ -39,7 +39,7 @@ public class SecurityApplication {
             CalculatorImpl calculator= new CalculatorImpl();
             System.out.println(req.body());
             calculator.controller(req.body());
-            return 10;
+            return calculator.sum();
 
         });
         post("/multi",(req,res)->{
